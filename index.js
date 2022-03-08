@@ -233,18 +233,18 @@ welcomeEl.innerText += "👋"
 // 1. Grab the save-el paragraph and store it in a variable called saveEl
 let saveEl = document.getElementById("save-el")
 let sumEl = document.getElementById("sum-el")
+let peopleSum = 0
 
 function save() {
     // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - ".
     console.log(count);
-    let peopleSum = 0;
-    peopleSum += count;
+    let totalResult = peopleSum + count
     let countStr = count + " - ";
     //console.log(countStr);
     // 3. Render the variable in the saveEl using innerText.
     saveEl.textContent += countStr
     // NB: Make sure to not delete the existing content of the paragraph.    
-    sumEl.textContent += peopleSum
+    sumEl.textContent = "Total in store: " + totalResult
     countEl.textContent = 0
     count = 0
 }
